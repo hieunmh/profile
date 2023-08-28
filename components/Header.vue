@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed top-0 z-10 bg-white dark:bg-black text-black dark:text-white w-full h-17">
+    <header class="fixed top-0 z-10 bg-white dark:bg-black text-black dark:text-white w-full">
         <Container class="h-full">
             <nav class="flex justify-between py-5 items-center h-full">
                 <NuxtLink to="/" class="font-bold">
@@ -63,18 +63,22 @@
                     />
                 </ul>
 
-                <div class="flex justify-center items-center mt-20 px-16">
+                <div class="flex justify-center items-center mt-10 px-16">
                     <button class="dark:hidden block" @click="colorMode.preference = 'dark'">
                         <Icon name="bi:moon" size="25" 
                             class="hover:bg-black hover:text-white p-1 rounded-full" 
                         />
                     </button>
 
-                    <button class="hidden dark:block p-1" @click="colorMode.preference = 'light'">
+                    <button class="hidden dark:block" @click="colorMode.preference = 'light'">
                         <Icon name="material-symbols:sunny-outline-rounded" size="25" 
                             class="p-1 rounded-full hover:bg-white hover:text-black" 
                         />
                     </button>
+                </div>
+
+                <div class="mt-10">
+                    <SocialMedia />
                 </div>
             </div>
         </Container>
@@ -88,6 +92,27 @@ const colorMode = useColorMode();
 const sideOpen = ref(false);
 
 const logoName = ref(`</>`);
+
+let windowWidth = ref(process.client ? window.innerWidth: '');
+
+onMounted(() => {
+    window.addEventListener('resize', function() {
+        windowWidth.value = window.innerWidth;
+    });
+
+    if (windowWidth.value > 640) {
+        sideOpen.value = false;
+    } 
+
+})
+
+watch(() => windowWidth.value, () => {
+    if (windowWidth.value > 640) {
+        sideOpen.value = false;
+    }
+});
+
+watch()
 
 const navLinks = ref([
   {

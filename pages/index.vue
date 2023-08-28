@@ -1,4 +1,5 @@
 <template>
+    <Title>@hieunm</Title>
     <Home />
     <Projects />
     <Tech />

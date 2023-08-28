@@ -51,7 +51,7 @@
                 />
         
                 <img width="200" src="/icons/bg-cover-2.svg"
-                    class="absolute bottom-[0%] -left-16 block lg:hidden mix-blend-difference"                
+                    class="absolute bottom-[0%] -left-16 mix-blend-difference"                
                 />
         
                 <img width="500" src="/icons/bg-cover-3.svg" 

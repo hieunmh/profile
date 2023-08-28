@@ -1,93 +1,105 @@
 <template>
     <section id="tech">
         <Container>
-            <h2 class="w-full font-bold text-2xl my-6 flex justify-center items-center cursor-pointer">
-                <div>
-                    Tehnology
-                    <Icon name="heroicons:wrench-screwdriver-solid" class="ml-3" />
-                </div>
-            </h2>
-    
-            <div class="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-4 xs:grid-cols-2 grid-cols-3 gap-4">
-                <div class="flex items-center justify-center relative  aspect-square 
-                    rounded-lg p-0 " 
-                    v-for="(skill, category) in skillset" :key="category"
-                >
-                    <div class=" opacity-100">
-                        <Icon :name="skill.icon" :size="iconSize" class="dark:text-green-50 dark:fill-white" />
-                    </div>
+            <div class="my-5 py-10 relative">
+                <div class="w-[100%] md:w-[60%]">
+                    <h2 class="">
+                        <span class="block font-black text-2xl">and finally,</span>
 
-                    <div class="absolute dark:bg-gray-600 bg-gray-200 w-full h-full text-3xl 
-                        rounded-lg opacity-0 hover:opacity-70 font-bold cursor-pointer"
-                    >
-                        <div class="flex justify-center opacity-100 items-center w-full h-full text-black dark:text-white">
-                            {{ skill.percent }}%
-                        </div>
+                        <span class="block font-black text-9xl">tech.</span>
+
+                        <span class="block font-bold text-xl">
+                            In my personal journey, I already worked with some techonologies,
+                            and here they are:
+                        </span>
+                    </h2>
+
+                    <div class="" v-for="(el, ind) in skills" :key="ind">
+                        <TagCard :el="el" />
                     </div>
+                </div>
+
+                <div class="w-[40%]">
+                    <img width="500" height="600" src="/icons/bg-cover-4.gif"
+                        class="hidden md:block w-[500px] h-[600px] z-0 object-cover 
+                        absolute top-[10%] right-0 mix-blend-difference"
+                    />
+
+                    <div class="hidden md:block bg-cover-color absolute top-10 
+                        -right-[50%] w-full h-[60%] mix-blend-difference"
+                    >
+                    </div>
+                </div>
+
+                <div class="w-full text-center font-semibold">
+                    <p>HOVER OVER A SKILL FOR CURRENCY PROFICIENCY</p>
                 </div>
             </div>  
 
-            <div class="w-full text-center mt-10">
-                HOVER OVER A SKILL FOR CURRENCY PROFICIENCY
-            </div>
         </Container>
     </section>
 </template>
 
 <script setup>
-let iconSize = ref(null);
-
-let windowWidth = ref(process.client ? window.innerWidth: '');
-
-onMounted(() => {
-    watchEffect(() => {
-        window.addEventListener('resize', function() {
-            windowWidth.value = window.innerWidth;
-        });
-
-        if (windowWidth.value <= 992 && windowWidth.value > 830) {
-            iconSize.value = 60;
-        } else if (windowWidth.value > 992) {
-            iconSize.value = 80;
-        } else if (windowWidth.value < 830 && windowWidth.value >= 767) {
-            iconSize.value = 40;
-        } else if (windowWidth.value < 767) {
-            iconSize.value = 80;
-        }
-    });
-})
 
 
-watch(() => windowWidth.value, () => {
-    if (windowWidth.value <= 992 && windowWidth.value > 830) {
-        iconSize.value = 60;
-    } else if (windowWidth.value > 992) {
-        iconSize.value = 80;
-    } else if (windowWidth.value < 830 && windowWidth.value >= 767) {
-        iconSize.value = 40;
-    } else if (windowWidth.value < 767) {
-        iconSize.value = 80;
-    }
-});
-
-const skillset = [
-    { name: 'Javascript', icon: 'fluent:code-js-16-filled', percent: 75 },
-    { name: 'Typescript', icon: 'teenyicons:typescript-solid', percent: 50 },
-    { name: 'C++', icon: 'simple-icons:cplusplus', percent: 50 },
-    { name: 'Java', icon: 'mdi:language-java', percent: 50 },
-    { name: 'PHP', icon: 'logos:php-alt', percent: 65 },
-    { name: 'Python', icon: 'simple-icons:python', percent: 60 },
-    { name: 'VueJS', icon: 'nonicons:vue-16', percent: 75 }, 
-    { name: 'NuxtJS', icon: 'simple-icons:nuxtdotjs', percent: 70 },
-    { name: 'ReactJS', icon: 'ri:reactjs-fill', percent: 40 }, 
-    { name: 'TailwindCSS', icon: 'mdi:tailwind', percent: 50 },
-    { name: 'MySQL', icon: 'tabler:brand-mysql', percent: 55 },
-    { name: 'MongoDB', icon: 'teenyicons:mongodb-solid', percent: 40 }, 
-    { name: 'Supabase', icon: 'devicon-plain:supabase', percent: 45 },
-    { name: 'Prisma', icon: 'simple-icons:prisma', percent: 45 },
-    { name: 'NodeJS', icon: 'tabler:brand-nodejs', percent: 30 },
-    { name: 'ExpressJS', icon: 'devicon:express', percent: 40 },
-    { name: 'Laravel', icon: 'mdi:laravel', percent: 55 },
-    { name: 'Docker', icon: 'mdi:docker', percent: 40 }, 
-];
+const skills = ref([
+    {
+        tag: "Languages",
+        skills: [
+            { id: 1, icon: "fa6-brands:square-js", name: "JavaScript", percent: 50 },
+            { id: 2, icon: "simple-icons:typescript", name: "TypeScript", percent: 50 },
+            { id: 3, icon: "cib:cplusplus", name: "C++", percent: 50 },
+            { id: 4, icon: "simple-icons:python", name: "Python", percent: 50 },
+            { id: 5, icon: "cib:java", name: "Java", percent: 50 },
+            { id: 6, icon: "bxl:php", name: "PHP", percent: 50 },
+        ],
+    },
+    {
+        tag: "Frameworks",
+        skills: [
+            { id: 1, icon: "tabler:brand-nodejs", name: "NodeJS", percent: 50 },
+            { id: 2, icon: "ri:reactjs-fill", name: "ReactJS", percent: 50 },
+            { id: 3, icon: "cib:vue-js", name: "VueJS", percent: 50 },
+            { id: 4, icon: "cib:nuxt-js", name: "NuxtJS", percent: 50 },
+            { id: 5, icon: "cib:laravel", name: "Laravel", percent: 50 },
+            { id: 6, icon: "devicon:express", name: "ExpressJS", percent: 50 },
+        ],
+    },
+    {
+        tag: "CSS Libraries",
+        skills: [
+            { id: 1, icon: "mdi:tailwind", name: "TailwindCSS", percent: 50 },
+            { id: 2, icon: "bi:bootstrap", name: "Bootstrap", percent: 50 },
+        ],
+    },
+    {
+        tag: "Database",
+        skills: [
+            { id: 1, icon: "tabler:brand-mysql", name: "MySQL", percent: 50 },
+            { id: 2, icon: "teenyicons:mongodb-outline", name: "MongoDB", percent: 50 },
+            { id: 3, icon: "simple-icons:prisma", name: "Prisma", percent: 50 },
+            { id: 4, icon: "devicon-plain:supabase", name: "Supabase", percent: 50 },
+        ],
+    },
+    {
+        tag: "Tools",
+        skills: [
+            { id: 1, icon: "teenyicons:docker-solid", name: "Docker", percent: 50 },
+            { id: 2, icon: "akar-icons:vscode-fill", name: "VS Code", percent: 50 },
+        ],
+    },
+]);
 </script>
+
+<style scoped>
+.bg-cover-color {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(74, 25, 112, 0.35) 71.35%,
+    rgba(104, 35, 157, 0) 100%
+  );
+  transform: rotate(79deg);
+}
+</style>

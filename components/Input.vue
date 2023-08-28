@@ -10,7 +10,7 @@
         <button type="submit" 
             class="bg-black px-4 py-2 border border-black hover:bg-white hover:text-black 
             dark:bg-white dark:border-white dark:hover:bg-black dark:hover:text-white dark:text-black
-            rounded-full ml-4 text-white"
+            rounded-full  w-full sm:w-[20%] sm:ml-4 text-white"
         >
             <span>Contact</span>
         </button>

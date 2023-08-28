@@ -94,6 +94,13 @@ data.list = [
         "link_github": "https://github.com/hieuunm/baitaplon",
         "image_name": "/project/snake.jpg"
     },
+    {
+        "name": "Portfolio V2",
+        "description": "Portfolio code with NuxtJS, deploy in Vercel",
+        "link_project": "https://github.com/hieuunm/",
+        "link_github": "https://github.com/hieuunm/",
+        "image_name": "/project/portfolio.png"
+    },
 ];
   
 let touchStartX = 0;

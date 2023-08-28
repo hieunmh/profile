@@ -17,16 +17,19 @@
                         <Icon :name="skill.icon" :size="iconSize" class="dark:text-green-50 dark:fill-white" />
                     </div>
 
-                    <div class="absolute dark:bg-gray-700 bg-gray-400 w-full h-full text-3xl rounded-lg 
-                        opacity-0 hover:opacity-70 font-bold cursor-pointer"
+                    <div class="absolute dark:bg-gray-600 bg-gray-200 w-full h-full text-3xl 
+                        rounded-lg opacity-0 hover:opacity-70 font-bold cursor-pointer"
                     >
-                        <div class="flex justify-center items-center w-full h-full text-gray-950 dark:text-white">
+                        <div class="flex justify-center opacity-100 items-center w-full h-full text-black dark:text-white">
                             {{ skill.percent }}%
                         </div>
                     </div>
                 </div>
-
             </div>  
+
+            <div class="w-full text-center mt-10">
+                HOVER OVER A SKILL FOR CURRENCY PROFICIENCY
+            </div>
         </Container>
     </section>
 </template>

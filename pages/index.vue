@@ -1,6 +1,7 @@
 <template>
     <Home />
     <Projects />
+    <Tech />
     <Contact />
 </template>
 

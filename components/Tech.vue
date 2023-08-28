@@ -52,7 +52,7 @@ const skills = ref([
             { id: 3, icon: "cib:cplusplus", name: "C++", percent: 50 },
             { id: 4, icon: "simple-icons:python", name: "Python", percent: 50 },
             { id: 5, icon: "cib:java", name: "Java", percent: 50 },
-            { id: 6, icon: "bxl:php", name: "PHP", percent: 50 },
+            { id: 6, icon: "simple-icons:php", name: "PHP", percent: 50 },
         ],
     },
     {

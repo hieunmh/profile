@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed top-0 z-10 bg-white dark:bg-black text-black dark:text-white w-full">
+    <header class="fixed top-0 z-20 bg-white dark:bg-black text-black dark:text-white w-full">
         <Container class="h-full">
             <nav class="flex justify-between py-5 items-center h-full">
                 <NuxtLink to="/" class="font-bold">

@@ -37,7 +37,7 @@
                     </div>
         
                     <div class="w-full">
-                        <NuxtLink to="/#contact">
+                        <NuxtLink to="/#projects">
                             <Icon name="ic:round-keyboard-double-arrow-down" size="25" class="animate-bounce" />
                         </NuxtLink>
                         <p class="mt-3">Click here to scroll down</p>

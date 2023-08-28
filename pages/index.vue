@@ -1,5 +1,6 @@
 <template>
     <Home />
+    <Projects />
     <Contact />
 </template>
 

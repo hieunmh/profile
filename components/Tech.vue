@@ -47,46 +47,46 @@ const skills = ref([
     {
         tag: "Languages",
         skills: [
-            { id: 1, icon: "fa6-brands:square-js", name: "JavaScript", percent: 50 },
+            { id: 1, icon: "fa6-brands:square-js", name: "JavaScript", percent: 75 },
             { id: 2, icon: "simple-icons:typescript", name: "TypeScript", percent: 50 },
             { id: 3, icon: "cib:cplusplus", name: "C++", percent: 50 },
             { id: 4, icon: "simple-icons:python", name: "Python", percent: 50 },
             { id: 5, icon: "cib:java", name: "Java", percent: 50 },
-            { id: 6, icon: "simple-icons:php", name: "PHP", percent: 50 },
+            { id: 6, icon: "simple-icons:php", name: "PHP", percent: 60 },
         ],
     },
     {
         tag: "Frameworks",
         skills: [
-            { id: 1, icon: "tabler:brand-nodejs", name: "NodeJS", percent: 50 },
-            { id: 2, icon: "ri:reactjs-fill", name: "ReactJS", percent: 50 },
-            { id: 3, icon: "cib:vue-js", name: "VueJS", percent: 50 },
-            { id: 4, icon: "cib:nuxt-js", name: "NuxtJS", percent: 50 },
-            { id: 5, icon: "cib:laravel", name: "Laravel", percent: 50 },
-            { id: 6, icon: "devicon:express", name: "ExpressJS", percent: 50 },
+            { id: 1, icon: "tabler:brand-nodejs", name: "NodeJS", percent: 30 },
+            { id: 2, icon: "ri:reactjs-fill", name: "ReactJS", percent: 40 },
+            { id: 3, icon: "cib:vue-js", name: "VueJS", percent: 75 },
+            { id: 4, icon: "cib:nuxt-js", name: "NuxtJS", percent: 65 },
+            { id: 5, icon: "cib:laravel", name: "Laravel", percent: 45 },
+            { id: 6, icon: "devicon:express", name: "ExpressJS", percent: 45 },
         ],
     },
     {
         tag: "CSS Libraries",
         skills: [
-            { id: 1, icon: "mdi:tailwind", name: "TailwindCSS", percent: 50 },
-            { id: 2, icon: "bi:bootstrap", name: "Bootstrap", percent: 50 },
+            { id: 1, icon: "mdi:tailwind", name: "TailwindCSS", percent: 55 },
+            { id: 2, icon: "bi:bootstrap", name: "Bootstrap", percent: 40 },
         ],
     },
     {
         tag: "Database",
         skills: [
-            { id: 1, icon: "tabler:brand-mysql", name: "MySQL", percent: 50 },
-            { id: 2, icon: "teenyicons:mongodb-outline", name: "MongoDB", percent: 50 },
-            { id: 3, icon: "simple-icons:prisma", name: "Prisma", percent: 50 },
-            { id: 4, icon: "devicon-plain:supabase", name: "Supabase", percent: 50 },
+            { id: 1, icon: "tabler:brand-mysql", name: "MySQL", percent: 55 },
+            { id: 2, icon: "teenyicons:mongodb-outline", name: "MongoDB", percent: 40 },
+            { id: 3, icon: "simple-icons:prisma", name: "Prisma", percent: 45 },
+            { id: 4, icon: "devicon-plain:supabase", name: "Supabase", percent: 45 },
         ],
     },
     {
         tag: "Tools",
         skills: [
-            { id: 1, icon: "teenyicons:docker-solid", name: "Docker", percent: 50 },
-            { id: 2, icon: "akar-icons:vscode-fill", name: "VS Code", percent: 50 },
+            { id: 1, icon: "teenyicons:docker-solid", name: "Docker", percent: 30 },
+            { id: 2, icon: "cib:postman", name: "Postman", percent: 50 },
         ],
     },
 ]);
